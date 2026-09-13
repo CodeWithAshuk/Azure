@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="Azure/Azure.csproj" />
+  <Project Path="Consumer/Consumer.csproj" />
+  <Project Path="Producer/Producer.csproj" />
+</Solution>
