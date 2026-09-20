@@ -6,8 +6,8 @@ namespace Producer
 {
     public class ProduceQueueMessage
     {
-        static string connectionString = "Endpoint=sb://servicebusashu.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=7jtRf6kajBJIBmy3faWu6u0KLCk7BzCq/+ASbBoSKw4="; // Add your Service Bus connection string here
-        static string queueName = "testashuqueue"; // Add your queue name here
+        static string connectionString = "your connection string"; // Add your Service Bus connection string here
+        static string queueName = "your queue name"; // Add your queue name here
         /// <summary>
         /// Sends a single message to an Azure Service Bus queue.
         /// Requires the Azure.Messaging.ServiceBus NuGet package.

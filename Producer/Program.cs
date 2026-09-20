@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Azure.Amqp.Framing;
+using System;
 using System.Threading.Tasks;
 
 namespace Producer
@@ -24,9 +25,20 @@ namespace Producer
                     return;
                 }
             }
-
-            await ProduceQueueMessage.SendMessageAsync(message);
+            await CallTopic(message);
+            await CallQueue(message);
             Console.WriteLine("Message sent.");
+            Console.ReadLine();
+        }
+        private static async Task CallQueue(string message)
+        {
+            await ProduceQueueMessage.SendMessageAsync(message);
+        }
+        private static async Task CallTopic(string message)
+        {
+            await ProduceTopicMessage.SendMessageAsync(message);
         }
     }
+
+
 }
